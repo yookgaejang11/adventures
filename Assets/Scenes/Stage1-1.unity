@@ -2409,13 +2409,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59640325}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.72, y: -0.24, z: 94.83}
   m_LocalScale: {x: 10.526272, y: 0.29235005, z: 10.526272}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1674059626}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &59640327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2429,7 +2429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRandom: 0
-  rotateSpeed: 100
+  rotateSpeed: 50
 --- !u!64 &59640328
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -87290,7 +87290,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9049921964030221012}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -87388,7 +87388,7 @@ MonoBehaviour:
   maxHp: 100
   maxAir: 200
   currentAir: 100
-  inventory: {fileID: 0}
+  inventory: {fileID: 9049921964030221012}
   speed: 6
   rotateSpeed: 5
 --- !u!136 &3971503451142675710
@@ -87673,7 +87673,7 @@ Transform:
   m_GameObject: {fileID: 1367950265739489894}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 9.34, z: -80.83}
+  m_LocalPosition: {x: 1.03, y: 9.34, z: -84.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -87792,7 +87792,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9049921964030221012}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -88117,7 +88117,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9049921964030221012}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -88199,7 +88199,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9049921964030221012}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -88263,7 +88263,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9049921964030221012}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -88606,7 +88606,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9049921964030221012}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -88741,7 +88741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9049921964030221012}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -88797,7 +88797,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9049921964030221012}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -89058,11 +89058,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWeight: 0
   maxWeight: 100
-  bag: {fileID: 0}
-  items: []
+  bag: {fileID: 2276856619368219086}
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   maxSlot: 4
-  slots: []
-  text: {fileID: 0}
+  slots:
+  - {fileID: 1757482877079300064}
+  - {fileID: 3692974105919464625}
+  - {fileID: 3726858152724938443}
+  - {fileID: 7193000078219514795}
+  - {fileID: 9173026102421959966}
+  - {fileID: 2817495091869042496}
+  - {fileID: 4317334035937541667}
+  - {fileID: 7614952009175709716}
+  text: {fileID: 5428122482785122242}
 --- !u!114 &9049921964030221013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89076,8 +89092,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Potions: []
-  hp_Slider: {fileID: 0}
-  air_Slider: {fileID: 0}
+  hp_Slider: {fileID: 5704526504001433059}
+  air_Slider: {fileID: 8800989636030059272}
 --- !u!224 &9113042045634069468
 RectTransform:
   m_ObjectHideFlags: 0

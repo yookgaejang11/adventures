@@ -113,9 +113,14 @@ public class Inventory : MonoBehaviour
                             GameObject.Find("Player").GetComponent<Player>().Invisible();
                         }
                         break;
+                    case "Correct_Item":
+                        {
+                            Destroy(clickedObj.gameObject.transform.GetChild(0).gameObject);
+                        }
+                        break;
 
                 }
-                Destroy(clickedObj.gameObject.transform.GetChild(0).gameObject);
+                
                 
 
 
