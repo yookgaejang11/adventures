@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public List<GameObject> Potions = new List<GameObject>();
-    public Player player;
     public Slider hp_Slider;
     public Slider air_Slider;
 
@@ -30,8 +29,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hp_Slider.value = (float)player.currentHp / player.maxHp;
-        air_Slider.value = (float)player.currentAir / player.maxAir;
+        
+        hp_Slider.value = (float)GameObject.Find("Player").GetComponent<Player>().currentHp / GameObject.Find("Player").GetComponent<Player>().maxHp;
+        air_Slider.value = (float)GameObject.Find("Player").GetComponent<Player>().currentAir / GameObject.Find("Player").GetComponent<Player>().maxAir;
     }
 
     public static GameManager Instance

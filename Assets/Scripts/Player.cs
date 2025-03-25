@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 {
     public float jumpScale;
     public bool isGrounded = false;
-
+    public int SpareMoney = 0;
     public float airTime = 0;
     public float timer = 0;
     public int airLevel = 0;
@@ -172,6 +172,7 @@ public class Player : MonoBehaviour
         {
             isDie = true;
             currentHp = 0;
+            SpareMoney = 0;
             animator.SetTrigger("isDie");
         }
         
@@ -209,8 +210,10 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Item"))
         {
+            other.gameObject.SetActive(false);
             inventory.SetItem(other.gameObject);
-            Destroy(other.gameObject);
+            SpareMoney += other.gameObject.GetComponent<Item>().Price;
+            
         }
 
 

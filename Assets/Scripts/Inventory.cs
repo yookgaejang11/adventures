@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    private static Inventory instance;
     GameObject objDestroy;
     bool selected = false;
     public int currentWeight = 0;
@@ -17,10 +18,33 @@ public class Inventory : MonoBehaviour
     public List<GameObject> slots = new List<GameObject>();
     public Text text;
 
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         bag.SetActive(false);
+        for (int i = 0; i <items.Count; i++)
+        {
+            if(items[i] != null)
+            {
+                if(GameObject.Find(items[i].name) != null)
+                {
+                    items[i].SetActive(false);
+                }
+            }
+        }
     }
 
     // Update is called once per frame
@@ -101,14 +125,26 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public static Inventory Instance
+    {
+        get
+        {
+            if(instance == null)
+            {
+                return null;
+            }
+            return instance;
+        }
+    }
+
     public void SetItem(GameObject item)
     {
         for (int i = 0; i < maxSlot; i++)
         {
             if (items[i] == null && !selected)
             {
-                items[i] = item;
-                GameObject it = Instantiate(items[i].GetComponent<Item>().InventoryImg);
+                items[i] = item.GetComponent<Item>().InventoryImg;
+                GameObject it = Instantiate(items[i]);
                 RectTransform itRt = it.GetComponent<RectTransform>();
                 currentWeight += item.GetComponent<Item>().Weight;
                 itRt.SetParent(slots[i].GetComponent<RectTransform>());

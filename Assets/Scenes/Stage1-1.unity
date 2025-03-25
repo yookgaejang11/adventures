@@ -56510,9 +56510,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6335829828897329944, guid: d0b7c40565c712e42806c3bccbc85893, type: 3}
-      propertyPath: isPotion
-      value: 1
+      propertyPath: Price
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -6335829828897329944, guid: d0b7c40565c712e42806c3bccbc85893, type: 3}
+      propertyPath: isPotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6335829828897329944, guid: d0b7c40565c712e42806c3bccbc85893, type: 3}
+      propertyPath: InventoryImg
+      value: 
+      objectReference: {fileID: 2096464893450649897, guid: 376340a67201c564c8833d19c3da95bb, type: 3}
     - target: {fileID: 4717560062718356356, guid: d0b7c40565c712e42806c3bccbc85893, type: 3}
       propertyPath: m_Name
       value: Potion
@@ -56559,7 +56567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5950376548245035976, guid: d0b7c40565c712e42806c3bccbc85893, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -66.59451
+      value: -66.95
       objectReference: {fileID: 0}
     - target: {fileID: 5950376548245035976, guid: d0b7c40565c712e42806c3bccbc85893, type: 3}
       propertyPath: m_LocalRotation.w
@@ -86515,8 +86523,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8180085450989851408}
-  - component: {fileID: 8298482137962012078}
-  - component: {fileID: 4627717037502425474}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -86873,7 +86879,7 @@ GameObject:
   - component: {fileID: 1437169119826540272}
   - component: {fileID: 5207278721733263952}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Slot0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87064,7 +87070,7 @@ GameObject:
   - component: {fileID: 1607269414078958143}
   - component: {fileID: 7889463114455234814}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Slot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87309,7 +87315,7 @@ GameObject:
   - component: {fileID: 7072153201324305204}
   - component: {fileID: 8420804597991781053}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Slot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87328,7 +87334,7 @@ GameObject:
   - component: {fileID: 3277656097942078225}
   - component: {fileID: 6031855171264116924}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Slot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87364,6 +87370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpScale: 5.5
   isGrounded: 0
+  SpareMoney: 0
   airTime: 0
   timer: 0
   airLevel: 1
@@ -87381,7 +87388,7 @@ MonoBehaviour:
   maxHp: 100
   maxAir: 200
   currentAir: 100
-  inventory: {fileID: 8298482137962012078}
+  inventory: {fileID: 0}
   speed: 6
   rotateSpeed: 5
 --- !u!136 &3971503451142675710
@@ -87507,6 +87514,8 @@ GameObject:
   - component: {fileID: 5619940041482095301}
   - component: {fileID: 4176932249253144136}
   - component: {fileID: 8646469542487056067}
+  - component: {fileID: 9049921964030221013}
+  - component: {fileID: 9049921964030221012}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -87568,7 +87577,7 @@ GameObject:
   - component: {fileID: 4076229502538789854}
   - component: {fileID: 8467724944109543070}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Slot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87609,28 +87618,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4627717037502425474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205704157292842152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66aebf9b6c4b09148aac6d0530a4f396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Potions:
-  - {fileID: 2096464893450649897, guid: 4c179aab2e2fb394aa1f5a930c0a3734, type: 3}
-  - {fileID: 2096464893450649897, guid: a2b95bda700ef044a88a0d32cdbb7ac9, type: 3}
-  - {fileID: 2096464893450649897, guid: 2be35916ace6ea04da555ebe1ac3517d, type: 3}
-  - {fileID: 2096464893450649897, guid: 124d46aecb10c31489467e2c97aa0a73, type: 3}
-  - {fileID: 2096464893450649897, guid: 3acbfe5bcc6136e4b8f536387f20bdea, type: 3}
-  - {fileID: 2096464893450649897, guid: fe3e2470cab63254c87da27e819fdc5f, type: 3}
-  player: {fileID: 3918884163890772304}
-  hp_Slider: {fileID: 5704526504001433059}
-  air_Slider: {fileID: 8800989636030059272}
 --- !u!1 &4772236605583779437
 GameObject:
   m_ObjectHideFlags: 0
@@ -87686,7 +87673,7 @@ Transform:
   m_GameObject: {fileID: 1367950265739489894}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: 6.64, z: -83.12}
+  m_LocalPosition: {x: 0.8, y: 9.34, z: -80.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -88445,7 +88432,7 @@ GameObject:
   - component: {fileID: 8180145001392039806}
   - component: {fileID: 6447467150022870972}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Slot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88539,7 +88526,7 @@ GameObject:
   - component: {fileID: 7406969819015679265}
   - component: {fileID: 3440921971217520351}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: Slot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88710,41 +88697,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8298482137962012078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205704157292842152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf23ff942e8404341a971e642dd29a5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWeight: 0
-  maxWeight: 100
-  bag: {fileID: 2276856619368219086}
-  items:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  maxSlot: 4
-  slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  text: {fileID: 5428122482785122242}
 --- !u!114 &8420804597991781053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89092,6 +89044,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &9049921964030221012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213578863117829818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf23ff942e8404341a971e642dd29a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeight: 0
+  maxWeight: 100
+  bag: {fileID: 0}
+  items: []
+  maxSlot: 4
+  slots: []
+  text: {fileID: 0}
+--- !u!114 &9049921964030221013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213578863117829818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66aebf9b6c4b09148aac6d0530a4f396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Potions: []
+  hp_Slider: {fileID: 0}
+  air_Slider: {fileID: 0}
 --- !u!224 &9113042045634069468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -89124,7 +89110,7 @@ GameObject:
   - component: {fileID: 1385142864764342461}
   - component: {fileID: 6108336782165077120}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Slot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

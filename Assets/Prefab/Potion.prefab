@@ -125,3 +125,4 @@ MonoBehaviour:
   InventoryImg: {fileID: 0}
   Price: 0
   Weight: 30
+  isPotion: 0
