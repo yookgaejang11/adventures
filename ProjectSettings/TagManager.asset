@@ -17,6 +17,7 @@ TagManager:
   - Enemy
   - Trap
   - spin
+  - Gate_Out
   layers:
   - Default
   - TransparentFX
