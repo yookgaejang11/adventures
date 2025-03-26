@@ -510,7 +510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5110194025358053405}
+      - m_Target: {fileID: 9177248478899996794}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -1277,11 +1277,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpScale: 5
   isGrounded: 0
+  SpareMoney: 0
   airTime: 0
+  timer: 0
   airLevel: 1
   weapon: {fileID: 765799251}
   light_obj: {fileID: 340632889512642112}
   flashLight: {fileID: 6011649437065452171}
+  baseSpeed: 7
+  itemSpeed: 0
+  smallSpeed: 0
   onWeapon: 1
   isAttack: 0
   isDie: 0
@@ -1290,7 +1295,7 @@ MonoBehaviour:
   maxHp: 10
   maxAir: 100
   currentAir: 100
-  inventory: {fileID: 5110194025358053405}
+  inventory: {fileID: 9177248478899996794}
   speed: 5
   rotateSpeed: 5
 --- !u!33 &2915401582582418311
@@ -1584,24 +1589,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6011649437065452171}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &3971015139149136155
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4919249713732738723}
-  - component: {fileID: 5110194025358053405}
-  - component: {fileID: 8501067449107932209}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!95 &4042509874518163659
 Animator:
   serializedVersion: 5
@@ -1909,21 +1896,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4919249713732738723
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3971015139149136155}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4681377, y: -3.7153702, z: 8.656693}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4919742694628866043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2048,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5110194025358053405}
+      - m_Target: {fileID: 9177248478899996794}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -2088,41 +2060,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5110194025358053405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3971015139149136155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf23ff942e8404341a971e642dd29a5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWeight: 0
-  maxWeight: 100
-  bag: {fileID: 3786979407556796601}
-  items:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  maxSlot: 4
-  slots:
-  - {fileID: 3707832354856781463}
-  - {fileID: 1753902323230262726}
-  - {fileID: 5243777432434340572}
-  - {fileID: 6078216961482544233}
-  - {fileID: 868852124943263287}
-  - {fileID: 868852124943263287}
-  - {fileID: 1224214743482785620}
-  - {fileID: 4808355927264876899}
-  text: {fileID: 6936555113102382773}
 --- !u!224 &5232053735635708858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2640,7 +2577,7 @@ Transform:
   m_GameObject: {fileID: 264629511706168960}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.27, y: 1.85, z: -3.9519427}
+  m_LocalPosition: {x: 6.27, y: 0.8, z: -3.9519427}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2897,7 +2834,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5110194025358053405}
+      - m_Target: {fileID: 9177248478899996794}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -3003,7 +2940,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5110194025358053405}
+      - m_Target: {fileID: 9177248478899996794}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -3120,7 +3057,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5110194025358053405}
+      - m_Target: {fileID: 9177248478899996794}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -3323,7 +3260,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5110194025358053405}
+      - m_Target: {fileID: 9177248478899996794}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -3387,22 +3324,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8501067449107932209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3971015139149136155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66aebf9b6c4b09148aac6d0530a4f396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2825275138935981494}
-  hp_Slider: {fileID: 724813291555250976}
-  air_Slider: {fileID: 4541568002194726347}
-  stage1_Spawn: {fileID: 0}
 --- !u!224 &8663194950542902401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3467,7 +3388,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5110194025358053405}
+      - m_Target: {fileID: 9177248478899996794}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -3546,6 +3467,8 @@ GameObject:
   - component: {fileID: 638254172275688454}
   - component: {fileID: 8994516081275365515}
   - component: {fileID: 3664785799016304640}
+  - component: {fileID: 9177248478899996795}
+  - component: {fileID: 9177248478899996794}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3553,6 +3476,62 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9177248478899996794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177248478899996793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf23ff942e8404341a971e642dd29a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeight: 0
+  maxWeight: 200
+  bag: {fileID: 3786979407556796601}
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxSlot: 4
+  slots:
+  - {fileID: 3707832354856781463}
+  - {fileID: 1753902323230262726}
+  - {fileID: 1778777826580029372}
+  - {fileID: 5243777432434340572}
+  - {fileID: 6078216961482544233}
+  - {fileID: 868852124943263287}
+  - {fileID: 1224214743482785620}
+  - {fileID: 4808355927264876899}
+  text: {fileID: 6936555113102382773}
+--- !u!114 &9177248478899996795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177248478899996793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66aebf9b6c4b09148aac6d0530a4f396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Potions:
+  - {fileID: 2096464893450649897, guid: 4c179aab2e2fb394aa1f5a930c0a3734, type: 3}
+  - {fileID: 2096464893450649897, guid: 124d46aecb10c31489467e2c97aa0a73, type: 3}
+  - {fileID: 2096464893450649897, guid: 3acbfe5bcc6136e4b8f536387f20bdea, type: 3}
+  - {fileID: 2096464893450649897, guid: fe3e2470cab63254c87da27e819fdc5f, type: 3}
+  - {fileID: 2096464893450649897, guid: a2b95bda700ef044a88a0d32cdbb7ac9, type: 3}
+  - {fileID: 2096464893450649897, guid: 2be35916ace6ea04da555ebe1ac3517d, type: 3}
+  hp_Slider: {fileID: 724813291555250976}
+  air_Slider: {fileID: 4541568002194726347}
 --- !u!114 &9210462998923185655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3597,7 +3576,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5110194025358053405}
+      - m_Target: {fileID: 9177248478899996794}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: InterectItem
         m_Mode: 2
@@ -3619,5 +3598,4 @@ SceneRoots:
   - {fileID: 6340292045242707848}
   - {fileID: 4085408538009621520}
   - {fileID: 1356356042}
-  - {fileID: 4919249713732738723}
   - {fileID: 425536945908463546}

@@ -43,7 +43,8 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        airLevel = 0;
+
+        inventory = GameObject.Find("Canvas").GetComponent<Inventory>();
     }
     // Update is called once per frame
     void Update()
