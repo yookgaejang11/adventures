@@ -23,6 +23,7 @@ public class DataManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -47,8 +48,8 @@ public class DataManager : MonoBehaviour
 [Serializable]
 public class PlayerData
 {
-    public int Score;
-    public int Gold;
+    public int Score = 0;
+    public int Gold = 0;
     public int GasLevel = 1;
     public int BagLevel = 1;
 }

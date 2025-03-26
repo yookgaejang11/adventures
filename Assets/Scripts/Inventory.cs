@@ -45,6 +45,28 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+
+        switch(DataManager.Instance.playerData.BagLevel)
+        {
+            case 1:
+                {
+                    maxWeight = 100;
+                    maxSlot = 4;
+                }
+                break;
+            case 2:
+                {
+                    maxWeight = 200;
+                    maxSlot = 6;
+                }
+                break;
+            case 3:
+                {
+                    maxWeight = 300;
+                    maxSlot = 8;
+                }
+                break;
+        }
     }
 
     // Update is called once per frame

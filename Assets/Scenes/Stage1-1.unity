@@ -86932,8 +86932,8 @@ MonoBehaviour:
   Money: 0
   currentHp: 100
   maxHp: 100
-  maxAir: 200
-  currentAir: 100
+  maxAir: 150
+  currentAir: 150
   inventory: {fileID: 0}
   speed: 6
   rotateSpeed: 5

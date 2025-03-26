@@ -1280,7 +1280,7 @@ MonoBehaviour:
   SpareMoney: 0
   airTime: 0
   timer: 0
-  airLevel: 1
+  airLevel: 0
   weapon: {fileID: 765799251}
   light_obj: {fileID: 340632889512642112}
   flashLight: {fileID: 6011649437065452171}
@@ -1291,10 +1291,10 @@ MonoBehaviour:
   isAttack: 0
   isDie: 0
   Money: 0
-  currentHp: 0
-  maxHp: 10
-  maxAir: 100
-  currentAir: 100
+  currentHp: 100
+  maxHp: 100
+  maxAir: 150
+  currentAir: 150
   inventory: {fileID: 9177248478899996794}
   speed: 5
   rotateSpeed: 5
@@ -3523,6 +3523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66aebf9b6c4b09148aac6d0530a4f396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerHp: 0
+  PlayerAir: 0
   Potions:
   - {fileID: 2096464893450649897, guid: 4c179aab2e2fb394aa1f5a930c0a3734, type: 3}
   - {fileID: 2096464893450649897, guid: 124d46aecb10c31489467e2c97aa0a73, type: 3}
