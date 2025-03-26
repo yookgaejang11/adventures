@@ -24,10 +24,10 @@ public class Player : MonoBehaviour
     public bool isAttack = false;
     public bool isDie = false;
     public int Money;
-    public int currentHp = 0;
-    public int maxHp = 0;
+    public int currentHp = 100;
+    public int maxHp = 100;
     public int maxAir = 100;
-    public float currentAir = 0;
+    public float currentAir = 100;
     public Inventory inventory;
     Animator animator;
     public float speed = 5;
@@ -38,13 +38,14 @@ public class Player : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        currentAir = maxAir;
-        currentHp = maxHp;
     }
     private void Start()
     {
 
         inventory = GameObject.Find("Canvas").GetComponent<Inventory>();
+        GameManager.Instance.PlayerAir =currentAir;
+        GameManager.Instance.PlayerHp = currentHp;
+
     }
     // Update is called once per frame
     void Update()
@@ -196,6 +197,15 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             airLevel += 1;
+            GameManager.Instance.PlayerHp = currentHp;
+            GameManager.Instance.PlayerAir = currentAir;
+        }
+        if(collision.gameObject.CompareTag("Gate_Out"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
+            airLevel -= 1;
+            GameManager.Instance.PlayerHp = currentHp;
+            GameManager.Instance.PlayerAir = currentAir;
         }
     }
 

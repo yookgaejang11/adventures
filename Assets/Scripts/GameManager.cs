@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public int PlayerHp;
+    public float PlayerAir;
     private static GameManager instance;
     public List<GameObject> Potions = new List<GameObject>();
     public Slider hp_Slider;
