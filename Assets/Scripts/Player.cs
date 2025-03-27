@@ -42,9 +42,46 @@ public class Player : MonoBehaviour
     private void Start()
     {
 
-        inventory = GameObject.Find("Canvas").GetComponent<Inventory>();
-        GameManager.Instance.PlayerAir =currentAir;
-        GameManager.Instance.PlayerHp = currentHp;
+        if(inventory == null)
+        {
+            inventory = GameObject.Find("Canvas").GetComponent<Inventory>();
+            Debug.Log("인벤 장착크");
+        }
+        if(SceneManager.GetActiveScene().buildIndex ==1)
+        {
+            
+            currentAir = maxAir;
+            currentHp = maxHp;
+            Debug.Log("적용");
+        }
+        else
+        {
+            GameManager.Instance.PlayerAir = currentAir;
+            GameManager.Instance.PlayerHp = currentHp;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex >= 2)
+        {
+            DataManager.Instance.playerData.PlayTime += Time.deltaTime;
+        }
+            switch (DataManager.Instance.playerData.GasLevel)
+        {
+            case 1:
+                {
+                    
+                }
+                break;
+            case 2:
+                {
+                    maxAir += 50;
+                }
+                break;
+            case 3:
+                {
+                    maxAir += 50;
+                }
+                break;
+        }
 
     }
     // Update is called once per frame
@@ -147,11 +184,6 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isWalk",false);
         }
-
-         
-
-
-
 
     }
 

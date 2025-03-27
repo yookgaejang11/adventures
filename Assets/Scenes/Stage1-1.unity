@@ -1783,7 +1783,7 @@ GameObject:
   - component: {fileID: 32208068}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f7d37c2b790044fae7cc528755d7a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryImg: {fileID: 2096464893450649897, guid: 376340a67201c564c8833d19c3da95bb, type: 3}
+  InventoryImg: {fileID: 2096464893450649897, guid: fe3e2470cab63254c87da27e819fdc5f, type: 3}
   Price: 10
   Weight: 30
   isPotion: 0

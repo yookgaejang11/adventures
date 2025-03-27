@@ -52,4 +52,5 @@ public class PlayerData
     public int Gold = 0;
     public int GasLevel = 1;
     public int BagLevel = 1;
+    public float PlayTime = 0;
 }

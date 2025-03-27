@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject RankingPage;
     public int BagPrice = 100;
     public int GasPrice = 100;
+    public Text BagPriceTxt;
+    public Text GasPriceTxt;
     public Text BagLevelTxt;
     public Text GasLevelTxt;
     public Text errorTxt;
@@ -18,6 +21,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    private void Start()
+    {
+        BagPriceTxt.text ="가방\n  가격 : \n" + BagPrice.ToString();
+        GasPriceTxt.text ="산소통\n  가격 : \n" + GasPrice.ToString();
+    }
     private void Update()
     {
         if(PriceTxt != null)
@@ -46,8 +54,10 @@ public class MenuManager : MonoBehaviour
                         Debug.Log("돈이 되잖아");
                         if (DataManager.Instance.playerData.BagLevel < 3)
                         {
+                            DataManager.Instance.playerData.Gold -= BagPrice;
                             DataManager.Instance.playerData.BagLevel += 1;
                             BagPrice += 25;
+                            BagPriceTxt.text = "가방\n  가격 : \n" + BagPrice.ToString();
                             BagLevelTxt.text = "현재 가방 레벨:" + DataManager.Instance.playerData.BagLevel;
                             if (DataManager.Instance.playerData.BagLevel == 3)
                             {
@@ -75,9 +85,11 @@ public class MenuManager : MonoBehaviour
                     {
                         if (DataManager.Instance.playerData.GasLevel < 3)
                         {
+                            DataManager.Instance.playerData.Gold -= GasPrice;
                             DataManager.Instance.playerData.GasLevel += 1;
                             GasPrice += 25;
                             GasLevelTxt.text = "현재 산소통 레벨:" + DataManager.Instance.playerData.GasLevel;
+                            GasPriceTxt.text = "산소통\n  가격 : \n" + GasPrice.ToString();
                             if (DataManager.Instance.playerData.GasLevel == 3)
                             {
                                 GasLevelTxt.text = "현재 산소통 레벨:MAX";
@@ -101,6 +113,11 @@ public class MenuManager : MonoBehaviour
         }
         yield return null;
     }
+
+    public void RankingBtn()
+    {
+        RankingPage.SetActive(true);
+    }
     public void Exit()
     {
         Application.Quit();
@@ -113,6 +130,11 @@ public class MenuManager : MonoBehaviour
             case 0:
                 {
                     ShopPage.SetActive(false);
+                }
+                break;
+            case 1:
+                {
+                    RankingPage.SetActive(false);
                 }
                 break;
         }
