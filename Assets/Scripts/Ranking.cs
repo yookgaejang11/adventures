@@ -15,7 +15,7 @@ public class Ranking : MonoBehaviour
 
         for (int i = 0; i < rankList.Count; i++)
         {
-            rankList[i].text = (i+1)+ ". " + clearTime[i].ToString();
+            rankList[i].text =  clearTime[i].ToString() + "s";
         }
         
     }
